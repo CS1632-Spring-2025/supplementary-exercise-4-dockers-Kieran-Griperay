@@ -223,7 +223,7 @@ public class D3Test {
   }
   @Test
   public void tEST5RENTACAT() {
-    driver.get("http://localhost:8080rent-a-cat");
+    driver.get("http://localhost:8080/rent-a-cat");
     {
       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
       wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Reset")));
