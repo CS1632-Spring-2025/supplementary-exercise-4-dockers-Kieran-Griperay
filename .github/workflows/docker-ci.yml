@@ -40,8 +40,11 @@ jobs:
       - name: Launch Web Service
         run: docker compose up -d
         
+      - name: Make wait script executable
+        run: chmod +x .github/workflows/wait-for-webserver.sh
+
       - name: Wait for Web Server
-        run: supplementary-exercise-4-dockers-Kieran-Griperay/wait-for-webserver.sh
+        run: bash .github/workflows/wait-for-webserver.sh # Execute using the relative path
       
       - name: Run Selenium Tests
         run: cd selenium && mvn test
